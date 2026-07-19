@@ -518,3 +518,56 @@ nav a:hover{
     }
 
 }
+
+/* Mobile Header Fix */
+
+@media(max-width:768px){
+
+.site-header{
+
+    padding:20px 0;
+
+}
+
+
+.site-header .container{
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+
+.logo{
+
+    justify-content:center;
+
+}
+
+
+nav{
+
+    width:100%;
+
+    padding:15px;
+
+    border-radius:16px;
+
+    background:rgba(255,255,255,0.05);
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+
+nav a{
+
+    padding:8px 10px;
+
+}
+
+
+}
