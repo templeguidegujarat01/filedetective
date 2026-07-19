@@ -22,6 +22,8 @@ fileInput.addEventListener("change", (event) => {
 
 function analyzeFile(file){
 
+    console.log("Analyzing file:", file.name);
+
     const extension =
         file.name.includes(".")
         ? file.name.split(".").pop().toUpperCase()
