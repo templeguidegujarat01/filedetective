@@ -11,14 +11,14 @@
 
 
 <title>
-FileDetective – Analyze Files Instantly in Your Browser
+FileDetective – Private Browser File Analyzer
 </title>
 
 
-<meta name="description" content="Analyze files instantly in your browser. View metadata, hashes, image details, PDF information, audio and video properties. No uploads. 100% private.">
+<meta name="description" content="Analyze files instantly in your browser. View metadata, hashes, file information and security details. No uploads. 100% private.">
 
 
-<meta name="keywords" content="file analyzer,file metadata,file info,pdf metadata,image metadata,file hash,sha256,file detective,mime type">
+<meta name="keywords" content="file analyzer,file metadata,file hash,sha256,private file analyzer,file detective">
 
 
 <meta name="author" content="FileDetective">
@@ -48,11 +48,12 @@ FileDetective – Analyze Files Instantly in Your Browser
 
 <meta property="og:title" content="FileDetective - Private File Analyzer">
 
-<meta property="og:description" content="Analyze files instantly in your browser. No uploads. 100% private.">
+<meta property="og:description" content="Analyze files locally in your browser. No uploads. 100% private.">
 
 <meta property="og:url" content="https://templeguidegujarat01.github.io/filedetective/">
 
 <meta property="og:image" content="https://templeguidegujarat01.github.io/filedetective/assets/logo.svg">
+
 
 
 <!-- Twitter -->
@@ -61,12 +62,14 @@ FileDetective – Analyze Files Instantly in Your Browser
 
 <meta name="twitter:title" content="FileDetective - Private File Analyzer">
 
-<meta name="twitter:description" content="Analyze files instantly in your browser. No uploads. 100% private.">
+<meta name="twitter:description" content="Analyze files locally. No uploads. 100% private.">
 
 <meta name="twitter:image" content="https://templeguidegujarat01.github.io/filedetective/assets/logo.svg">
 
 
-<link rel="icon" href="assets/favicon.ico">
+
+<link rel="icon" href="assets/logo.svg">
+
 
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -87,10 +90,12 @@ FileDetective – Analyze Files Instantly in Your Browser
 </head>
 
 
+
 <body>
 
 
 <div id="app">
+
 
 
 <header class="site-header">
@@ -113,25 +118,26 @@ FileDetective
 </div>
 
 
+
 <nav>
 
 
-<a href="#">
+<a href="#home">
 Home
 </a>
 
 
-<a href="#">
+<a href="#features">
 Features
 </a>
 
 
-<a href="#">
+<a href="#privacy">
 Privacy
 </a>
 
 
-<a href="#">
+<a href="#about">
 About
 </a>
 
@@ -145,7 +151,10 @@ About
 </header>
 
 
-<main>
+
+
+
+<main id="home">
 
 
 <section class="hero">
@@ -162,18 +171,22 @@ About
 </span>
 
 
+
 <h1>
 Analyze Files Instantly
 </h1>
 
 
+
 <p class="hero-description">
 
-Drag and drop any file to instantly view metadata, hashes, image details,
-PDF information, audio/video properties and much more.
+Drag and drop any file to view information, metadata,
+hashes and security details instantly.
+
 Your files never leave your device.
 
 </p>
+
 
 
 <div class="hero-buttons">
@@ -186,7 +199,7 @@ Choose File
 </button>
 
 
-<button class="secondary-btn">
+<button class="secondary-btn" onclick="document.querySelector('#features').scrollIntoView()">
 
 Learn More
 
@@ -194,6 +207,7 @@ Learn More
 
 
 </div>
+
 
 
 <div class="privacy-points">
@@ -217,8 +231,8 @@ Learn More
 </div>
 
 
-</div>
 
+</div>
 
 <div class="hero-preview">
 
@@ -239,7 +253,7 @@ Drop your file here
 
 
 <p>
-or click the button above
+or choose a file to analyze
 </p>
 
 
@@ -248,6 +262,7 @@ type="file"
 id="fileInput"
 hidden
 >
+
 
 
 </div>
@@ -265,21 +280,31 @@ hidden
 </main>
 
 
+
+
+
 <section class="features-section" id="features">
+
 
 <div class="container">
 
+
 <div class="section-title">
+
 
 <h2>
 Powerful File Analysis
 </h2>
 
+
 <p>
-Everything happens inside your browser.
+Everything happens locally inside your browser.
 </p>
 
+
 </div>
+
+
 
 
 <div class="analysis-grid">
@@ -287,49 +312,167 @@ Everything happens inside your browser.
 
 <div class="info-card">
 
+
 <h3>
 🔒 Privacy First
 </h3>
 
+
 <p>
-Your files never leave your device.
-No uploads. Complete privacy.
+Your files are never uploaded. Everything stays on your device.
 </p>
 
+
 </div>
+
 
 
 <div class="info-card">
 
+
 <h3>
-⚡ Instant Analysis
+⚡ Instant Results
 </h3>
 
+
 <p>
-Get file details, hashes and metadata instantly.
+Get file information, hashes and metadata quickly.
 </p>
 
+
 </div>
+
 
 
 <div class="info-card">
 
+
 <h3>
-🛡 Security Check
+🛡 Security Checks
 </h3>
 
+
 <p>
-Detect suspicious file extensions locally.
+Detect suspicious file extensions and basic risks.
 </p>
 
+
 </div>
+
 
 
 </div>
 
+
 </div>
+
 
 </section>
+
+
+
+
+
+<section class="privacy-section" id="privacy">
+
+
+<div class="container">
+
+
+<div class="section-title">
+
+
+<h2>
+Your Privacy Matters
+</h2>
+
+
+<p>
+Private analysis without uploading your files.
+</p>
+
+
+</div>
+
+
+
+<div class="info-card">
+
+
+<p>
+
+Traditional online tools often require uploading files.
+FileDetective works differently.
+
+</p>
+
+
+<p>
+
+All analysis happens directly in your browser.
+Your documents, images and media stay with you.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section class="about-section" id="about">
+
+
+<div class="container">
+
+
+<div class="section-title">
+
+
+<h2>
+About FileDetective
+</h2>
+
+
+<p>
+A simple and powerful browser-based file intelligence tool.
+</p>
+
+
+</div>
+
+
+
+
+<div class="info-card">
+
+
+<p>
+
+FileDetective helps users understand their files by showing
+file information, metadata, hashes and security details
+without requiring any server upload.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
 
 
 <section class="analysis-section">
@@ -375,9 +518,6 @@ Waiting for file...
 
 
 </div>
-
-
-
 
 <div class="info-card">
 
@@ -438,7 +578,9 @@ Waiting for file...
 
 
 
+
 </div>
+
 
 
 
@@ -457,6 +599,99 @@ Download Report
 
 
 
+
+
+<section class="faq-section" id="faq">
+
+
+<div class="container">
+
+
+<div class="section-title">
+
+
+<h2>
+Frequently Asked Questions
+</h2>
+
+
+<p>
+Common questions about FileDetective.
+</p>
+
+
+</div>
+
+
+
+<div class="info-card">
+
+
+<h3>
+Are my files uploaded?
+</h3>
+
+
+<p>
+
+No. FileDetective analyzes files directly inside your browser.
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="info-card">
+
+
+<h3>
+Is FileDetective free?
+</h3>
+
+
+<p>
+
+Yes. The core browser-based analysis works without payment.
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="info-card">
+
+
+<h3>
+What files can I analyze?
+</h3>
+
+
+<p>
+
+Images, PDFs, audio, video and other common file types.
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
 <footer class="site-footer">
 
 
@@ -465,7 +700,8 @@ Download Report
 
 <p>
 
-© 2026 FileDetective. Analyze files locally. No uploads. 100% Private.
+© 2026 FileDetective.
+Analyze files locally. No uploads. 100% Private.
 
 </p>
 
@@ -474,6 +710,7 @@ Download Report
 
 
 </footer>
+
 
 
 </div>
@@ -491,6 +728,7 @@ Download Report
 <script src="js/export.js"></script>
 
 <script src="app.js"></script>
+
 
 
 </body>
