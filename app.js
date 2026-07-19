@@ -97,5 +97,18 @@ if (file.type.startsWith("audio/")) {
     });
 
 }
-    
+
+if (file.type.startsWith("video/")) {
+
+    analyzeVideo(file).then(video => {
+
+        metadataInfo.innerHTML = `
+            <p><strong>Resolution:</strong> ${video.width} × ${video.height}</p>
+            <p><strong>Duration:</strong> ${video.duration.toFixed(2)} seconds</p>
+        `;
+
+    });
+
+}
+
 }
