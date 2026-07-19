@@ -1,0 +1,55 @@
+@keyframes fadeUp {
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+.hero-content,
+.hero-preview{
+
+    animation:fadeUp .6s ease forwards;
+
+}
+
+
+.upload-card{
+
+    transition:.3s ease;
+
+}
+
+
+.upload-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+.info-card{
+
+    transition:.3s ease;
+
+}
+
+
+.info-card:hover{
+
+    transform:translateY(-4px);
+
+}
