@@ -52,4 +52,24 @@ function analyzeFile(file){
     hashInfo.innerHTML = `
         <p>SHA-256 generation will be added next.</p>
     `;
+
+generateSHA256(file).then(hash => {
+
+    hashInfo.innerHTML = `
+        <p><strong>SHA-256</strong></p>
+
+        <textarea readonly
+        style="
+        width:100%;
+        min-height:110px;
+        margin-top:12px;
+        padding:12px;
+        border-radius:12px;
+        resize:none;
+        font-family:monospace;
+        ">${hash}</textarea>
+    `;
+
+});
+    
 }
