@@ -111,4 +111,15 @@ if (file.type.startsWith("video/")) {
 
 }
 
+if (file.type === "application/pdf") {
+
+    const pdf = analyzePDF(file);
+
+    metadataInfo.innerHTML = `
+        <p><strong>PDF File:</strong> ${pdf.name}</p>
+        <p><strong>Size:</strong> ${pdf.sizeKB} KB</p>
+    `;
+
+}
+
 }
