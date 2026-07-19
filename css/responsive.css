@@ -1,0 +1,85 @@
+@media (max-width: 900px){
+
+    .hero-container{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+
+    .hero h1{
+
+        font-size:2.8rem;
+
+    }
+
+
+    .hero-description{
+
+        margin:auto;
+
+    }
+
+
+    .hero-buttons{
+
+        justify-content:center;
+
+    }
+
+
+    .privacy-points{
+
+        justify-content:center;
+
+    }
+
+
+    nav{
+
+        display:none;
+
+    }
+
+}
+
+
+@media (max-width:600px){
+
+    .hero{
+
+        padding:60px 0 40px;
+
+    }
+
+
+    .hero h1{
+
+        font-size:2.2rem;
+
+    }
+
+
+    .hero-description{
+
+        font-size:1rem;
+
+    }
+
+
+    .upload-card{
+
+        min-height:280px;
+
+    }
+
+
+    .site-header .container{
+
+        height:70px;
+
+    }
+
+}
