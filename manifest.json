@@ -1,0 +1,16 @@
+{
+  "name": "FileDetective",
+  "short_name": "FileDetective",
+  "description": "Analyze files instantly in your browser. No uploads. 100% private.",
+  "start_url": "/filedetective/",
+  "display": "standalone",
+  "background_color": "#0F172A",
+  "theme_color": "#0F172A",
+  "icons": [
+    {
+      "src": "assets/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}
