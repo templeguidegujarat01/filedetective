@@ -85,5 +85,17 @@ if (file.type.startsWith("image/")) {
     });
 
 }
+
+if (file.type.startsWith("audio/")) {
+
+    analyzeAudio(file).then(audio => {
+
+        metadataInfo.innerHTML = `
+            <p><strong>Duration:</strong> ${audio.duration.toFixed(2)} seconds</p>
+        `;
+
+    });
+
+}
     
 }
