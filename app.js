@@ -193,3 +193,25 @@ window.addEventListener("dragover", (e) => {
 window.addEventListener("drop", (e) => {
     e.preventDefault();
 });
+
+const downloadReportBtn = document.getElementById("downloadReportBtn");
+
+
+downloadReportBtn.addEventListener("click", ()=>{
+
+    const report = {
+
+        general: generalInfo.innerText,
+
+        security: securityInfo.innerText,
+
+        metadata: metadataInfo.innerText,
+
+        hash: hashInfo.innerText
+
+    };
+
+
+    downloadReport(report);
+
+});
