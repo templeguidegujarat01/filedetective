@@ -281,3 +281,4 @@ uploadCard.addEventListener("click", ()=>{
     fileInput.click();
 
 });
+
