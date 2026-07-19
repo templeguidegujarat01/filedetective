@@ -37,15 +37,36 @@ function analyzeFile(file){
         <p><strong>Last Modified:</strong> ${new Date(file.lastModified).toLocaleString()}</p>
     `;
 
-    if(file.name.toLowerCase().endsWith(".exe")){
-        securityInfo.innerHTML = `
-            <p style="color:#EF4444;"><strong>⚠ Executable file detected.</strong></p>
-        `;
-    }else{
-        securityInfo.innerHTML = `
-            <p style="color:#22C55E;"><strong>✓ No obvious warning detected.</strong></p>
-        `;
-    }
+    const suspiciousPattern = /\.(jpg|jpeg|png|pdf|doc|docx)\.(exe|bat|cmd|js)$/i;
+
+
+if(suspiciousPattern.test(file.name)){
+
+    securityInfo.innerHTML = `
+        <p style="color:#EF4444;">
+        ⚠ Suspicious double extension detected.
+        </p>
+    `;
+
+}
+else if(file.name.toLowerCase().endsWith(".exe")){
+
+    securityInfo.innerHTML = `
+        <p style="color:#F59E0B;">
+        ⚠ Executable file detected.
+        </p>
+    `;
+
+}
+else{
+
+    securityInfo.innerHTML = `
+        <p style="color:#22C55E;">
+        ✓ No obvious warning detected.
+        </p>
+    `;
+
+}
 
     metadataInfo.innerHTML = `
         <p>Detailed metadata module will be added next.</p>
