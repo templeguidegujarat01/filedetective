@@ -212,6 +212,8 @@ downloadReportBtn.addEventListener("click", ()=>{
     };
 
 
+    console.log("Report Data:", report);
+
     downloadReport(report);
 
 });
