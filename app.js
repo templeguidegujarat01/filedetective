@@ -39,13 +39,55 @@ function analyzeFile(file){
         ? file.name.split(".").pop().toUpperCase()
         : "Unknown";
 
-    generalInfo.innerHTML = `
-        <p><strong>Name:</strong> ${file.name}</p>
-        <p><strong>Extension:</strong> ${extension}</p>
-        <p><strong>Size:</strong> ${(file.size/1024).toFixed(2)} KB</p>
-        <p><strong>Type:</strong> ${file.type || "Unknown"}</p>
-        <p><strong>Last Modified:</strong> ${new Date(file.lastModified).toLocaleString()}</p>
-    `;
+    const sizeMB = (file.size / (1024 * 1024)).toFixed(2);
+
+
+let category = "Unknown";
+
+
+if(file.type.startsWith("image/")){
+
+    category = "Image";
+
+}
+else if(file.type.startsWith("video/")){
+
+    category = "Video";
+
+}
+else if(file.type.startsWith("audio/")){
+
+    category = "Audio";
+
+}
+else if(file.type === "application/pdf"){
+
+    category = "PDF Document";
+
+}
+else{
+
+    category = "Document / Other";
+
+}
+
+
+
+generalInfo.innerHTML = `
+
+<p><strong>Name:</strong> ${file.name}</p>
+
+<p><strong>Extension:</strong> ${extension}</p>
+
+<p><strong>Size:</strong> ${sizeMB} MB</p>
+
+<p><strong>Type:</strong> ${file.type || "Unknown"}</p>
+
+<p><strong>Category:</strong> ${category}</p>
+
+<p><strong>Last Modified:</strong> ${new Date(file.lastModified).toLocaleString()}</p>
+
+`;
 
     const suspiciousPattern = /\.(jpg|jpeg|png|pdf|doc|docx)\.(exe|bat|cmd|js)$/i;
 
