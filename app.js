@@ -81,7 +81,8 @@ generateSHA256(file).then(hash => {
     hashInfo.innerHTML = `
         <p><strong>SHA-256</strong></p>
 
-        <textarea readonly
+        <textarea id="hashValue"
+        readonly
         style="
         width:100%;
         min-height:110px;
@@ -92,6 +93,8 @@ generateSHA256(file).then(hash => {
         font-family:monospace;
         ">${hash}</textarea>
     `;
+
+    window.currentHash = hash;
 
 });
 
@@ -207,7 +210,7 @@ downloadReportBtn.addEventListener("click", ()=>{
 
         metadata: metadataInfo.innerText,
 
-        hash: hashInfo.innerText
+        hash: window.currentHash || "Hash generating..."
 
     };
 
