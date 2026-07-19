@@ -125,3 +125,41 @@ if (file.type === "application/pdf") {
 }
 
 }
+
+const uploadCard = document.querySelector(".upload-card");
+
+
+uploadCard.addEventListener("dragover", (e)=>{
+
+    e.preventDefault();
+
+    uploadCard.style.borderColor = "#2563EB";
+
+});
+
+
+uploadCard.addEventListener("dragleave", ()=>{
+
+    uploadCard.style.borderColor = "rgba(255,255,255,.15)";
+
+});
+
+
+uploadCard.addEventListener("drop",(e)=>{
+
+    e.preventDefault();
+
+
+    uploadCard.style.borderColor = "rgba(255,255,255,.15)";
+
+
+    const file = e.dataTransfer.files[0];
+
+
+    if(file){
+
+        analyzeFile(file);
+
+    }
+
+});
