@@ -71,5 +71,19 @@ generateSHA256(file).then(hash => {
     `;
 
 });
+
+if (file.type.startsWith("image/")) {
+
+    analyzeImage(file).then(image => {
+
+        metadataInfo.innerHTML = `
+            <p><strong>Width:</strong> ${image.width}px</p>
+            <p><strong>Height:</strong> ${image.height}px</p>
+            <p><strong>Resolution:</strong> ${image.width} × ${image.height}</p>
+        `;
+
+    });
+
+}
     
 }
