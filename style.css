@@ -313,3 +313,147 @@ nav a:hover{
     margin-bottom:22px;
 
 }
+
+/* =========================
+   Premium UI Upgrade
+========================= */
+
+.hero h1{
+
+    letter-spacing:-2px;
+
+}
+
+
+.hero-description{
+
+    line-height:1.8;
+
+}
+
+
+.upload-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.08),
+        rgba(255,255,255,.02)
+    ),
+    var(--card);
+
+}
+
+
+.upload-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    border-radius:50%;
+
+    background:rgba(37,99,235,.18);
+
+    filter:blur(50px);
+
+    top:-60px;
+
+    right:-60px;
+
+}
+
+
+.upload-icon{
+
+    background:rgba(37,99,235,.15);
+
+    width:110px;
+
+    height:110px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:30px;
+
+}
+
+
+.info-card{
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.06),
+        rgba(255,255,255,.02)
+    ),
+    var(--card);
+
+    border:1px solid var(--border);
+
+    padding:28px;
+
+    border-radius:22px;
+
+}
+
+
+.info-card h3{
+
+    margin-bottom:18px;
+
+    font-size:1.15rem;
+
+}
+
+
+.analysis-grid{
+
+    gap:24px;
+
+}
+
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:45px;
+
+}
+
+
+.section-title h2{
+
+    font-size:2.4rem;
+
+    letter-spacing:-1px;
+
+}
+
+
+.site-footer{
+
+    margin-top:80px;
+
+    padding:35px 0;
+
+    border-top:1px solid var(--border);
+
+    color:var(--text2);
+
+    text-align:center;
+
+}
