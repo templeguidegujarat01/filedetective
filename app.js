@@ -272,3 +272,12 @@ downloadReportBtn.addEventListener("click", ()=>{
     downloadReport(report);
 
 });
+
+const uploadCard = document.querySelector(".upload-card");
+
+
+uploadCard.addEventListener("click", ()=>{
+
+    fileInput.click();
+
+});
