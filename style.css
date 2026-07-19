@@ -457,3 +457,64 @@ nav a:hover{
     text-align:center;
 
 }
+
+/* ==========================
+   Extra Sections Styling
+========================== */
+
+
+.features-section,
+.privacy-section,
+.about-section,
+.faq-section{
+
+    padding:90px 0;
+
+}
+
+
+
+.features-section .info-card,
+.privacy-section .info-card,
+.about-section .info-card,
+.faq-section .info-card{
+
+    line-height:1.8;
+
+}
+
+
+
+.faq-section .info-card{
+
+    margin-bottom:20px;
+
+}
+
+
+
+.faq-section h3{
+
+    margin-bottom:12px;
+
+}
+
+
+
+.features-section .analysis-grid{
+
+    grid-template-columns:repeat(3,1fr);
+
+}
+
+
+
+@media(max-width:900px){
+
+    .features-section .analysis-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
