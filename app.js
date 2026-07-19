@@ -1,3 +1,4 @@
+let lastAnalyzedFile = null;
 const chooseFileBtn = document.getElementById("chooseFileBtn");
 const fileInput = document.getElementById("fileInput");
 
@@ -21,6 +22,15 @@ fileInput.addEventListener("change", (event) => {
 });
 
 function analyzeFile(file){
+
+    if(lastAnalyzedFile === file.name){
+
+        return;
+
+    }
+
+    lastAnalyzedFile = file.name;
+
 
     console.log("Analyzing file:", file.name);
 
