@@ -202,7 +202,7 @@ if (file.type === "application/pdf") {
 
 }
 
-const uploadCard = document.querySelector(".upload-card");
+const uploadBox = document.querySelector(".upload-card");
 
 
 uploadCard.addEventListener("dragover", (e)=>{
@@ -273,10 +273,10 @@ downloadReportBtn.addEventListener("click", ()=>{
 
 });
 
-const uploadCard = document.querySelector(".upload-card");
+const uploadBox = document.querySelector(".upload-card");
 
 
-uploadCard.addEventListener("click", ()=>{
+uploadBox.addEventListener("click", ()=>{
 
     fileInput.click();
 
