@@ -133,6 +133,21 @@ Private File Analysis Report
 </div>
 
 
+<button onclick="window.print()" 
+style="
+margin-top:20px;
+padding:12px 24px;
+border:none;
+border-radius:12px;
+background:#2563EB;
+color:white;
+font-size:16px;
+cursor:pointer;
+">
+⬇ Save / Download Report
+</button>
+
+
 
 <div class="card">
 
