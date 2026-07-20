@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact — FileDetective</title>
+<meta name="description" content="Get in touch with the FileDetective project through GitHub or email for questions, feedback, and bug reports.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://filedetective.github.io/contact.html">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contact — FileDetective">
+<meta property="og:description" content="Get in touch through GitHub or email for questions, feedback, and bug reports.">
+<meta property="og:url" content="https://filedetective.github.io/contact.html">
+<meta property="og:image" content="https://filedetective.github.io/assets/og-cover.png">
+<meta property="og:site_name" content="FileDetective">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact — FileDetective">
+<meta name="twitter:description" content="Get in touch through GitHub or email for questions, feedback, and bug reports.">
+<meta name="twitter:image" content="https://filedetective.github.io/assets/og-cover.png">
+
+<meta name="theme-color" content="#0B0E14">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/animations.css">
+<style>
+  .legal { padding: 64px 28px 100px; }
+  .legal-inner { max-width: var(--container-narrow); margin: 0 auto; }
+  .legal-eyebrow { font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent); margin-bottom: 12px; }
+  .legal-title { font-size: clamp(1.9rem, 4vw, 2.6rem); margin-bottom: 16px; }
+  .legal-lead { color: var(--text-muted); font-size: 1rem; margin-bottom: 36px; max-width: 56ch; }
+
+  .contact-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+    margin-bottom: 44px;
+  }
+  .contact-card {
+    background: var(--card);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-md);
+    padding: 24px;
+  }
+  .contact-card h2 { font-size: 1rem; margin-bottom: 8px; color: var(--text); }
+  .contact-card p { color: var(--text-muted); font-size: 0.88rem; margin-bottom: 16px; }
+
+  .contact-form {
+    display: grid;
+    gap: 16px;
+    max-width: 520px;
+  }
+  .form-field { display: flex; flex-direction: column; gap: 6px; }
+  .form-field label { font-size: 0.85rem; color: var(--text-muted); }
+  .form-field input, .form-field textarea {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+    color: var(--text);
+    font-size: 0.92rem;
+    resize: vertical;
+  }
+  .form-field input:focus, .form-field textarea:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-color: var(--accent-dim);
+  }
+  .form-note { font-size: 0.8rem; color: var(--text-faint); margin-top: -4px; }
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand" aria-label="FileDetective home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <rect x="1" y="1" width="26" height="26" rx="7" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M9 14L12.5 17.5L19 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span class="brand-name">FileDetective</span>
+    </a>
+    <nav class="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="index.html#features" class="nav-link">Features</a></li>
+        <li><a href="privacy.html" class="nav-link">Privacy</a></li>
+        <li><a href="faq.html" class="nav-link">FAQ</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="legal">
+    <div class="legal-inner">
+      <p class="legal-eyebrow">Contact</p>
+      <h1 class="legal-title">Get in touch</h1>
+      <p class="legal-lead">Questions, feedback, and bug reports are all welcome. Since FileDetective has no backend, the form below opens your own email client — nothing is sent through a third-party service.</p>
+
+      <div class="contact-cards">
+        <div class="contact-card">
+          <h2>GitHub</h2>
+          <p>Report bugs, request features, or contribute code directly.</p>
+          <a class="btn btn-outline" href="https://github.com/filedetective" target="_blank" rel="noopener noreferrer">Open repository</a>
+        </div>
+        <div class="contact-card">
+          <h2>Email</h2>
+          <p>For anything that doesn't fit a GitHub issue.</p>
+          <a class="btn btn-outline" href="mailto:hello@filedetective.app">hello@filedetective.app</a>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm" action="mailto:hello@filedetective.app" method="post" enctype="text/plain">
+        <div class="form-field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required autocomplete="name">
+        </div>
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required autocomplete="email">
+        </div>
+        <div class="form-field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <p class="form-note">Submitting opens your default email application with this message pre-filled.</p>
+        <button type="submit" class="btn btn-primary" style="width:fit-content;">Send message</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 28 28" fill="none">
+          <rect x="1" y="1" width="26" height="26" rx="7" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M9 14L12.5 17.5L19 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span>FileDetective</span>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://github.com/filedetective" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </nav>
+    <div class="footer-meta">
+      <p>All analysis runs locally in your browser. No files are ever uploaded.</p>
+      <p>Version 1.0 · &copy; <span id="year"></span> FileDetective</p>
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
