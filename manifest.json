@@ -1,10 +1,10 @@
 {
-  "id": "/",
+  "id": "/filedetective/",
   "name": "FileDetective — Private Browser File Analyzer",
   "short_name": "FileDetective",
   "description": "Analyze images, PDFs, audio, video, and text files entirely inside your browser. No uploads, no servers, no tracking.",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "/filedetective/",
+  "scope": "/filedetective/",
   "display": "standalone",
   "orientation": "any",
   "background_color": "#0B0E14",
@@ -48,13 +48,13 @@
       "name": "Analyze a file",
       "short_name": "Analyze",
       "description": "Jump straight to the upload area",
-      "url": "/#top"
+      "url": "/filedetective/#top"
     },
     {
       "name": "Privacy details",
       "short_name": "Privacy",
       "description": "Read how FileDetective handles your files",
-      "url": "/#privacy"
+      "url": "/filedetective/privacy.html"
     }
   ],
   "screenshots": []
