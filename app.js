@@ -534,4 +534,12 @@ window.FD = window.FD || {};
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
   FD.utils = { formatBytes, formatDate, escapeHTML, categorizeFile };
+
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('service-worker.js').catch(() => {
+        /* Offline support is a progressive enhancement; ignore failures. */
+      });
+    });
+  }
 })();
