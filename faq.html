@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FAQ — FileDetective</title>
+<meta name="description" content="Answers to common questions about FileDetective: supported file types, privacy, offline use, hashing, and the limits of browser-based security checks.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://filedetective.github.io/faq.html">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="FAQ — FileDetective">
+<meta property="og:description" content="Answers to common questions about supported file types, privacy, offline use, and hashing.">
+<meta property="og:url" content="https://filedetective.github.io/faq.html">
+<meta property="og:image" content="https://filedetective.github.io/assets/og-cover.png">
+<meta property="og:site_name" content="FileDetective">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="FAQ — FileDetective">
+<meta name="twitter:description" content="Answers to common questions about supported file types, privacy, offline use, and hashing.">
+<meta name="twitter:image" content="https://filedetective.github.io/assets/og-cover.png">
+
+<meta name="theme-color" content="#0B0E14">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/animations.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does any part of my file get uploaded?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. FileDetective has no server component. Everything happens inside JavaScript running in your browser tab, and the file is never transmitted anywhere."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What file types are supported?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Common images, PDFs, audio, video, and text-based formats including JSON, XML, HTML, CSS, and JavaScript. Unsupported files still get general information and a hash."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does FileDetective detect malware?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Browsers can't scan for malware signatures. FileDetective surfaces filename and extension heuristics, like double extensions, as signals rather than a verdict."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does FileDetective work offline?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Once the page has loaded, analysis needs no network connection at all, since every computation happens locally."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the hash calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "FileDetective uses the Web Crypto API to compute a SHA-256 digest of the file's contents, directly in the browser."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+  .legal { padding: 64px 28px 100px; }
+  .legal-inner { max-width: var(--container-narrow); margin: 0 auto; }
+  .legal-eyebrow { font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent); margin-bottom: 12px; }
+  .legal-title { font-size: clamp(1.9rem, 4vw, 2.6rem); margin-bottom: 30px; }
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand" aria-label="FileDetective home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <rect x="1" y="1" width="26" height="26" rx="7" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M9 14L12.5 17.5L19 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span class="brand-name">FileDetective</span>
+    </a>
+    <nav class="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="index.html#features" class="nav-link">Features</a></li>
+        <li><a href="privacy.html" class="nav-link">Privacy</a></li>
+        <li><a href="faq.html" class="nav-link active">FAQ</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="legal">
+    <div class="legal-inner">
+      <p class="legal-eyebrow">FAQ</p>
+      <h1 class="legal-title">Common questions</h1>
+
+      <div class="accordion" id="accordion">
+        <div class="accordion-item">
+          <h2>
+            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-1">
+              Does any part of my file get uploaded?
+              <svg class="accordion-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 5L7 10L12 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </h2>
+          <div class="accordion-panel" id="faq-1" role="region">
+            <p>No. FileDetective has no server component. Everything happens inside JavaScript running in your browser tab, and the file is never transmitted anywhere.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2>
+            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-2">
+              What file types are supported?
+              <svg class="accordion-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 5L7 10L12 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </h2>
+          <div class="accordion-panel" id="faq-2" role="region">
+            <p>Common images, PDFs, audio, video, and text-based formats including JSON, XML, HTML, CSS, and JavaScript. Unsupported files still get general information and a hash.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2>
+            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-3">
+              Does FileDetective detect malware?
+              <svg class="accordion-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 5L7 10L12 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </h2>
+          <div class="accordion-panel" id="faq-3" role="region">
+            <p>No. Browsers can't scan for malware signatures. FileDetective surfaces filename and extension heuristics — like double extensions — as signals, not a verdict.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2>
+            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-4">
+              Does FileDetective work offline?
+              <svg class="accordion-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 5L7 10L12 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </h2>
+          <div class="accordion-panel" id="faq-4" role="region">
+            <p>Once the page has loaded, analysis needs no network connection at all, since every computation happens locally.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2>
+            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-5">
+              How is the hash calculated?
+              <svg class="accordion-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 5L7 10L12 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </h2>
+          <div class="accordion-panel" id="faq-5" role="region">
+            <p>FileDetective uses the Web Crypto API to compute a SHA-256 digest of the file's contents, directly in your browser.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2>
+            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-6">
+              Can I trust the security warnings?
+              <svg class="accordion-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 5L7 10L12 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </h2>
+          <div class="accordion-panel" id="faq-6" role="region">
+            <p>They're useful signals, not a guarantee. FileDetective checks filename patterns and extensions only — it cannot inspect a file's actual code execution behavior the way dedicated antivirus software can.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2>
+            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-7">
+              Can I export the report?
+              <svg class="accordion-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 5L7 10L12 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </h2>
+          <div class="accordion-panel" id="faq-7" role="region">
+            <p>Yes. The "Export report" button opens a branded, print-friendly report in a new tab, which you can save as a PDF using your browser's print dialog.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 28 28" fill="none">
+          <rect x="1" y="1" width="26" height="26" rx="7" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M9 14L12.5 17.5L19 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span>FileDetective</span>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://github.com/filedetective" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </nav>
+    <div class="footer-meta">
+      <p>All analysis runs locally in your browser. No files are ever uploaded.</p>
+      <p>Version 1.0 · &copy; <span id="year"></span> FileDetective</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+document.querySelectorAll('.accordion-trigger').forEach(trigger => {
+  trigger.addEventListener('click', () => {
+    const panel = document.getElementById(trigger.getAttribute('aria-controls'));
+    const item = trigger.closest('.accordion-item');
+    const isOpen = trigger.getAttribute('aria-expanded') === 'true';
+    trigger.setAttribute('aria-expanded', String(!isOpen));
+    item.classList.toggle('open', !isOpen);
+    panel.style.maxHeight = !isOpen ? panel.scrollHeight + 'px' : '0px';
+  });
+});
+</script>
+</body>
+</html>
