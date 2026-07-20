@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Page Not Found — FileDetective</title>
+<meta name="description" content="The page you're looking for doesn't exist. Head back to FileDetective to analyze a file privately in your browser.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://filedetective.github.io/404.html">
+<meta name="theme-color" content="#0B0E14">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/animations.css">
+<style>
+  .not-found {
+    min-height: calc(100vh - var(--header-h));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 28px;
+  }
+  .not-found-inner {
+    max-width: 560px;
+    text-align: center;
+  }
+  .not-found-code {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--accent);
+    letter-spacing: 0.06em;
+    margin-bottom: 18px;
+  }
+  .not-found-title {
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    margin-bottom: 16px;
+  }
+  .not-found-sub {
+    color: var(--text-muted);
+    font-size: 1.02rem;
+    margin-bottom: 32px;
+  }
+  .not-found-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
+  .not-found-frame {
+    position: relative;
+    display: inline-flex;
+    padding: 22px 30px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    margin-bottom: 32px;
+    color: var(--text-faint);
+  }
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand" aria-label="FileDetective home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <rect x="1" y="1" width="26" height="26" rx="7" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M9 14L12.5 17.5L19 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span class="brand-name">FileDetective</span>
+    </a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="not-found">
+    <div class="not-found-inner">
+      <div class="not-found-frame">
+        <span class="bracket bracket-tl" aria-hidden="true"></span>
+        <span class="bracket bracket-tr" aria-hidden="true"></span>
+        <span class="bracket bracket-bl" aria-hidden="true"></span>
+        <span class="bracket bracket-br" aria-hidden="true"></span>
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <circle cx="17" cy="17" r="11" stroke="currentColor" stroke-width="2"/>
+          <path d="M25 25L34 34" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M13 17H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <p class="not-found-code">Error 404</p>
+      <h1 class="not-found-title">Nothing to analyze here</h1>
+      <p class="not-found-sub">The page you're looking for doesn't exist or may have moved. The file scanner is still right where you left it.</p>
+
+      <div class="not-found-actions">
+        <a class="btn btn-primary" href="index.html">Back to FileDetective</a>
+        <a class="btn btn-outline" href="index.html#faq">Browse the FAQ</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 28 28" fill="none">
+          <rect x="1" y="1" width="26" height="26" rx="7" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M9 14L12.5 17.5L19 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span>FileDetective</span>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://github.com/filedetective" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </nav>
+    <div class="footer-meta">
+      <p>All analysis runs locally in your browser. No files are ever uploaded.</p>
+      <p>Version 1.0 · &copy; <span id="year"></span> FileDetective</p>
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
