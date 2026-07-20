@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>About — FileDetective</title>
+<meta name="description" content="FileDetective is a small, focused, privacy-first browser tool for inspecting files. Learn about the project's mission and how it's built.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://filedetective.github.io/about.html">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="About — FileDetective">
+<meta property="og:description" content="A small, focused, privacy-first browser tool for inspecting files.">
+<meta property="og:url" content="https://filedetective.github.io/about.html">
+<meta property="og:image" content="https://filedetective.github.io/assets/og-cover.png">
+<meta property="og:site_name" content="FileDetective">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About — FileDetective">
+<meta name="twitter:description" content="A small, focused, privacy-first browser tool for inspecting files.">
+<meta name="twitter:image" content="https://filedetective.github.io/assets/og-cover.png">
+
+<meta name="theme-color" content="#0B0E14">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/animations.css">
+<style>
+  .legal { padding: 64px 28px 100px; }
+  .legal-inner { max-width: var(--container-narrow); margin: 0 auto; }
+  .legal-eyebrow { font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent); margin-bottom: 12px; }
+  .legal-title { font-size: clamp(1.9rem, 4vw, 2.6rem); margin-bottom: 24px; }
+  .legal h2 { font-size: 1.15rem; margin: 40px 0 12px; color: var(--text); }
+  .legal p { color: var(--text-muted); font-size: 0.97rem; margin-bottom: 14px; }
+  .roadmap-grid {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+  .roadmap-card {
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    background: var(--card);
+  }
+  .roadmap-card span {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .roadmap-card h3 { font-size: 0.98rem; margin: 10px 0 8px; }
+  .roadmap-card p { font-size: 0.85rem; margin: 0; }
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand" aria-label="FileDetective home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <rect x="1" y="1" width="26" height="26" rx="7" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M9 14L12.5 17.5L19 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span class="brand-name">FileDetective</span>
+    </a>
+    <nav class="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="index.html#features" class="nav-link">Features</a></li>
+        <li><a href="privacy.html" class="nav-link">Privacy</a></li>
+        <li><a href="index.html#faq" class="nav-link">FAQ</a></li>
+        <li><a href="about.html" class="nav-link active">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="legal">
+    <div class="legal-inner">
+      <p class="legal-eyebrow">About</p>
+      <h1 class="legal-title">Built to be inspected, not just used</h1>
+
+      <p>FileDetective exists because inspecting a file shouldn't require handing it over to a stranger's server. It's a small, focused tool: point it at a file, and it tells you exactly what the browser can honestly determine about it — no more, no less.</p>
+
+      <h2>Mission</h2>
+      <p>Give anyone — students, journalists, IT professionals, or someone just curious about a download — a fast, trustworthy way to look inside a file without installing software or trusting a third-party upload service.</p>
+
+      <h2>Privacy philosophy</h2>
+      <p>Every feature is designed around a single constraint: the file cannot leave the device it's opened on. That constraint shapes the entire architecture, from the lack of a backend to the way reports are exported through the browser's own print dialog rather than a server-rendered PDF.</p>
+
+      <h2>Technology</h2>
+      <p>The project runs entirely as static files — HTML, CSS, and vanilla JavaScript — hosted on GitHub Pages. There's no account system, no database, and no hidden infrastructure. What you see in the browser is the whole application.</p>
+
+      <h2>Transparency</h2>
+      <p>Where a browser genuinely cannot expose certain information — like camera EXIF data or true malware signatures — FileDetective says so plainly instead of guessing or fabricating a result.</p>
+
+      <h2>Roadmap</h2>
+      <p>Development is organized in stages, each adding capability without compromising the privacy model.</p>
+      <div class="roadmap-grid">
+        <div class="roadmap-card">
+          <span>Version 1</span>
+          <h3>Production release</h3>
+          <p>Core analysis for images, PDFs, audio, video, and text, with a polished, responsive interface.</p>
+        </div>
+        <div class="roadmap-card">
+          <span>Version 2</span>
+          <h3>Advanced browser analysis</h3>
+          <p>Batch analysis, additional hash algorithms, local history, and richer metadata extraction.</p>
+        </div>
+        <div class="roadmap-card">
+          <span>Version 3</span>
+          <h3>Professional tool</h3>
+          <p>Magic-byte verification, entropy estimation, a hex viewer, and file comparison.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 28 28" fill="none">
+          <rect x="1" y="1" width="26" height="26" rx="7" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M9 14L12.5 17.5L19 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span>FileDetective</span>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://github.com/filedetective" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </nav>
+    <div class="footer-meta">
+      <p>All analysis runs locally in your browser. No files are ever uploaded.</p>
+      <p>Version 1.0 · &copy; <span id="year"></span> FileDetective</p>
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
