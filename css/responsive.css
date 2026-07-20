@@ -1,141 +1,108 @@
-@media (max-width: 900px){
+/* =========================================================
+   FileDetective — Responsive Overrides
+   Mobile-first breakpoints layered on top of style.css
+   ========================================================= */
 
-    .hero-container{
+/* ---------- Tablet: <= 1024px ---------- */
+@media (max-width: 1024px) {
+  .header-inner { padding: 0 22px; }
+  .hero { padding: 72px 22px 56px; }
+  .section { padding: 72px 22px; }
+  .report-section { padding: 16px 22px 64px; }
 
-        grid-template-columns:1fr;
-
-        text-align:center;
-
-    }
-
-
-    .hero h1{
-
-        font-size:2.8rem;
-
-    }
-
-
-    .hero-description{
-
-        margin:auto;
-
-    }
-
-
-    .hero-buttons{
-
-        justify-content:center;
-
-    }
-
-
-    .privacy-points{
-
-        justify-content:center;
-
-    }
-
-
-    nav{
-
-        display:none;
-
-    }
-
+  .feature-grid,
+  .steps-grid,
+  .privacy-grid {
+    gap: 18px;
+  }
 }
 
-
-@media (max-width:600px){
-
-    .hero{
-
-        padding:60px 0 40px;
-
-    }
-
-
-    .hero h1{
-
-        font-size:2.2rem;
-
-    }
-
-
-    .hero-description{
-
-        font-size:1rem;
-
-    }
-
-
-    .upload-card{
-
-        min-height:280px;
-
-    }
-
-
-    .site-header .container{
-
-        height:70px;
-
-    }
-
+/* ---------- Nav collapse: <= 860px ---------- */
+@media (max-width: 860px) {
+  .main-nav { display: none; }
+  .menu-toggle { display: flex; }
+  .mobile-nav { display: block; }
 }
 
-/* Mobile Navigation Improvement */
+/* ---------- Small tablet / large phone: <= 768px ---------- */
+@media (max-width: 768px) {
+  :root { --header-h: 64px; }
 
-@media(max-width:768px){
+  .hero { padding: 56px 18px 48px; }
+  .hero-title { font-size: clamp(1.9rem, 7vw, 2.6rem); }
+  .hero-sub { font-size: 1rem; }
 
-.site-header .container{
+  .scan-frame { min-height: 220px; padding: 32px 18px; margin-top: 36px; }
 
-    flex-direction:column;
+  .section { padding: 60px 18px; }
+  .section-title { font-size: clamp(1.5rem, 6vw, 1.9rem); }
 
-    gap:20px;
+  .report-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 22px;
+  }
 
+  .report-actions { width: 100%; }
+  .report-actions .btn { flex: 1; }
+
+  .report-grid { grid-template-columns: 1fr; }
+
+  .feature-grid,
+  .steps-grid,
+  .privacy-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .footer-meta { text-align: left; }
 }
 
+/* ---------- Phones: <= 480px ---------- */
+@media (max-width: 480px) {
+  .header-inner { padding: 0 16px; }
+  .brand-name { font-size: 0.95rem; }
 
-nav{
+  .hero-eyebrow { font-size: 0.7rem; }
+  .hero-badges li { font-size: 0.72rem; padding: 5px 10px; }
 
-    display:flex;
+  .drop-title { font-size: 1rem; text-align: center; }
+  .drop-hint { text-align: center; font-size: 0.8rem; }
 
-    flex-wrap:wrap;
+  .btn { width: 100%; }
+  .contact-actions { flex-direction: column; }
+  .contact-actions .btn { width: 100%; }
 
-    justify-content:center;
+  .report-card { padding: 20px; }
+  .report-row { flex-direction: column; align-items: flex-start; gap: 4px; }
+  .report-row-value { text-align: left; }
 
-    gap:18px;
-
+  .footer-nav { gap: 14px 18px; }
 }
 
-
-nav a{
-
-    font-size:14px;
-
+/* ---------- Very small phones: <= 360px ---------- */
+@media (max-width: 360px) {
+  .hero-title { font-size: 1.7rem; }
+  .scan-frame { min-height: 190px; padding: 26px 14px; }
+  .bracket { width: 18px; height: 18px; }
 }
 
-
-.hero h1{
-
-    font-size:2.2rem;
-
+/* ---------- Large desktop / 4K: >= 1600px ---------- */
+@media (min-width: 1600px) {
+  :root {
+    --container: 1320px;
+  }
+  body { font-size: 17px; }
+  .hero-title { font-size: clamp(3.2rem, 4.4vw, 4.4rem); }
 }
 
-
-.hero-description{
-
-    font-size:1rem;
-
-}
-
-
-.downloadReportBtn{
-
-    width:100%;
-
-}
-
-
+/* ---------- Landscape phones (short viewport height) ---------- */
+@media (max-height: 480px) and (orientation: landscape) {
+  .hero { padding: 100px 22px 40px; }
+  .scan-frame { min-height: 160px; }
 }
