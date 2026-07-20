@@ -1,738 +1,405 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta name="google-site-verification" content="9KdSHVZAo9K8qN2FbIQZ9iyoyYiYhxjSf6dOUeaJiTQ" />
-
 <meta charset="UTF-8">
-
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-<title>
-FileDetective – Private Browser File Analyzer
-</title>
-
-
-<meta name="description" content="Analyze files instantly in your browser. View metadata, hashes, file information and security details. No uploads. 100% private.">
-
-
-<meta name="keywords" content="file analyzer,file metadata,file hash,sha256,private file analyzer,file detective">
-
-
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FileDetective — Analyze Any File Privately, Right In Your Browser</title>
+<meta name="description" content="FileDetective inspects images, PDFs, audio, video, and text files entirely inside your browser. No uploads, no servers, no tracking — just instant, private file analysis.">
+<meta name="keywords" content="file analyzer, file metadata, hash generator, SHA-256, browser file inspector, privacy file analysis, PDF metadata viewer, image metadata viewer">
 <meta name="author" content="FileDetective">
-
-
-<meta name="robots" content="index,follow,max-image-preview:large">
-
-
-<meta name="theme-color" content="#0F172A">
-
-
-<meta name="application-name" content="FileDetective">
-
-
-<meta name="apple-mobile-web-app-capable" content="yes">
-
-
-<link rel="canonical" href="https://templeguidegujarat01.github.io/filedetective/">
-
-
-<link rel="manifest" href="manifest.json">
-
-
-<!-- Open Graph -->
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://filedetective.github.io/">
 
 <meta property="og:type" content="website">
-
-<meta property="og:title" content="FileDetective - Private File Analyzer">
-
-<meta property="og:description" content="Analyze files locally in your browser. No uploads. 100% private.">
-
-<meta property="og:url" content="https://templeguidegujarat01.github.io/filedetective/">
-
-<meta property="og:image" content="https://templeguidegujarat01.github.io/filedetective/assets/logo.svg">
-
-
-
-<!-- Twitter -->
+<meta property="og:title" content="FileDetective — Analyze Any File Privately, Right In Your Browser">
+<meta property="og:description" content="Inspect images, PDFs, audio, video, and text files entirely inside your browser. No uploads, no servers, no tracking.">
+<meta property="og:url" content="https://filedetective.github.io/">
+<meta property="og:image" content="https://filedetective.github.io/assets/og-cover.png">
+<meta property="og:site_name" content="FileDetective">
 
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="FileDetective — Analyze Any File Privately, Right In Your Browser">
+<meta name="twitter:description" content="Inspect images, PDFs, audio, video, and text files entirely inside your browser. No uploads, no servers, no tracking.">
+<meta name="twitter:image" content="https://filedetective.github.io/assets/og-cover.png">
 
-<meta name="twitter:title" content="FileDetective - Private File Analyzer">
-
-<meta name="twitter:description" content="Analyze files locally. No uploads. 100% private.">
-
-<meta name="twitter:image" content="https://templeguidegujarat01.github.io/filedetective/assets/logo.svg">
-
-
-
-<link rel="icon" href="assets/logo.svg">
-
-
+<meta name="theme-color" content="#0B0E14">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
-
 <link rel="stylesheet" href="css/responsive.css">
-
 <link rel="stylesheet" href="css/animations.css">
 
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "FileDetective",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (Web Browser)",
+  "description": "A privacy-first browser-based file analysis tool that inspects images, PDFs, audio, video, and text files without uploading them anywhere.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "url": "https://filedetective.github.io/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "FileDetective",
+  "url": "https://filedetective.github.io/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "FileDetective",
+  "url": "https://filedetective.github.io/",
+  "logo": "https://filedetective.github.io/assets/logo-512.png"
+}
+</script>
 </head>
-
-
-
 <body>
 
+<a href="#main" class="skip-link">Skip to content</a>
 
-<div id="app">
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="#top" class="brand" aria-label="FileDetective home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <rect x="1" y="1" width="26" height="26" rx="7" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M9 14L12.5 17.5L19 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span class="brand-name">FileDetective</span>
+    </a>
 
+    <nav class="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="#top" class="nav-link">Home</a></li>
+        <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+        <li><a href="#privacy" class="nav-link">Privacy</a></li>
+        <li><a href="#faq" class="nav-link">FAQ</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
 
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 
-<header class="site-header">
-
-
-<div class="container">
-
-
-<div class="logo">
-
-
-<img src="assets/logo.svg" alt="FileDetective Logo">
-
-
-<span>
-FileDetective
-</span>
-
-
-</div>
-
-
-
-<nav>
-
-
-<a href="#home">
-Home
-</a>
-
-
-<a href="#features">
-Features
-</a>
-
-
-<a href="#privacy">
-Privacy
-</a>
-
-
-<a href="#about">
-About
-</a>
-
-
-</nav>
-
-
-</div>
-
-
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+    <ul>
+      <li><a href="#top" class="nav-link">Home</a></li>
+      <li><a href="#features" class="nav-link">Features</a></li>
+      <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+      <li><a href="#privacy" class="nav-link">Privacy</a></li>
+      <li><a href="#faq" class="nav-link">FAQ</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
 </header>
 
-
-
-
-
-<main id="home">
-
-
-<section class="hero">
-
-
-<div class="container hero-container">
-
-
-<div class="hero-content">
-
-
-<span class="badge">
-100% Browser Based
-</span>
-
-
-
-<h1>
-Analyze Files Instantly
-</h1>
-
-
-
-<p class="hero-description">
-
-Drag and drop any file to view information, metadata,
-hashes and security details instantly.
-
-Your files never leave your device.
-
-</p>
-
-
-
-<div class="hero-buttons">
-
-
-<button class="primary-btn" id="chooseFileBtn">
-
-Choose File
-
-</button>
-
-
-<button class="secondary-btn" onclick="document.querySelector('#features').scrollIntoView()">
-
-Learn More
-
-</button>
-
-
-</div>
-
-
-
-<div class="privacy-points">
-
-
-<div>
-🔒 No Uploads
-</div>
-
-
-<div>
-⚡ Instant Analysis
-</div>
-
-
-<div>
-🛡️ 100% Private
-</div>
-
-
-</div>
-
-
-
-</div>
-
-<div class="hero-preview">
-
-
-<div class="upload-card">
-
-
-<div class="upload-icon">
-
-📁
-
-</div>
-
-
-<h2>
-Drop your file here
-</h2>
-
-
-<p>
-or choose a file to analyze
-</p>
-
-
-<input
-type="file"
-id="fileInput"
-hidden
->
-
-
-
-</div>
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
+<main id="main">
+
+  <section class="hero" id="top">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Runs entirely in your browser — nothing is ever uploaded</p>
+      <h1 class="hero-title">Point it at a file.<br>See exactly what's inside.</h1>
+      <p class="hero-sub">FileDetective reads metadata, generates hashes, and flags security signals for images, documents, audio, video, and code — without your file ever leaving your device.</p>
+
+      <div class="scan-frame" id="dropZone" tabindex="0" role="button" aria-label="Choose or drop a file to analyze">
+        <span class="bracket bracket-tl" aria-hidden="true"></span>
+        <span class="bracket bracket-tr" aria-hidden="true"></span>
+        <span class="bracket bracket-bl" aria-hidden="true"></span>
+        <span class="bracket bracket-br" aria-hidden="true"></span>
+
+        <div class="drop-content" id="dropContent">
+          <svg class="drop-icon" width="44" height="44" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+            <path d="M22 6V28M22 6L14 14M22 6L30 14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M8 30V33.5C8 35.9853 10.0147 38 12.5 38H31.5C33.9853 38 36 35.9853 36 33.5V30" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <p class="drop-title">Drop a file here or click to browse</p>
+          <p class="drop-hint">Images · PDF · Audio · Video · Text · Code — processed 100% locally</p>
+        </div>
+
+        <div class="drop-processing" id="dropProcessing" hidden>
+          <div class="scan-line" aria-hidden="true"></div>
+          <p class="processing-label" id="processingLabel">Reading file…</p>
+        </div>
+
+        <input type="file" id="fileInput" class="visually-hidden" aria-hidden="true" tabindex="-1">
+      </div>
+
+      <ul class="hero-badges" aria-hidden="true">
+        <li>No uploads</li>
+        <li>No tracking</li>
+        <li>Works offline</li>
+        <li>Free forever</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="report-section" id="reportSection" hidden>
+    <div class="report-inner">
+      <div class="report-header">
+        <span class="bracket bracket-tl" aria-hidden="true"></span>
+        <span class="bracket bracket-tr" aria-hidden="true"></span>
+        <div>
+          <p class="report-eyebrow">Analysis complete</p>
+          <h2 class="report-filename" id="reportFilename">—</h2>
+        </div>
+        <div class="report-actions">
+          <button class="btn btn-outline" id="exportBtn" type="button">Export report</button>
+          <button class="btn btn-ghost" id="newFileBtn" type="button">Analyze another file</button>
+        </div>
+      </div>
+
+      <div class="report-grid" id="reportGrid" aria-live="polite">
+        <!-- Cards injected by app.js: General, Security, Metadata, Hash -->
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="features">
+    <div class="section-inner">
+      <p class="section-eyebrow">What it reads</p>
+      <h2 class="section-title">One tool, every common file type</h2>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="2" y="2" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><circle cx="8" cy="8.5" r="1.8" stroke="currentColor" stroke-width="1.6"/><path d="M3 16L8 11L12 15L15 12L19 16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Images</h3>
+          <p>Dimensions, aspect ratio, transparency, estimated megapixels, and file signature for PNG, JPG, GIF, WEBP, BMP, SVG, and more.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M6 2H14L18 6V20H4V2H6Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M14 2V6H18" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>PDFs</h3>
+          <p>Page count, author, producer, PDF version, encryption status, and document metadata — read directly from the file structure.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 3V15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="7" cy="17" r="2.5" stroke="currentColor" stroke-width="1.6"/><circle cx="15" cy="15" r="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M11 3L17 5V13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Audio</h3>
+          <p>Duration, estimated bitrate, sample rate, and channel information for MP3, WAV, OGG, and AAC files.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="2" y="4" width="14" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M16 9L20 6V16L16 13" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Video</h3>
+          <p>Duration, resolution, aspect ratio, and estimated frame rate for MP4, WEBM, and MOV files.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M7 4L2 11L7 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 4L20 11L15 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Code &amp; data</h3>
+          <p>Validation and structure for JSON, XML, and HTML, plus line, word, and character counts for plain text.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 2L18 5V10C18 15 15 18.5 11 20C7 18.5 4 15 4 10V5L11 2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 11L10 13L14 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Security signals</h3>
+          <p>Double-extension checks, executable detection, and filename heuristics — clearly labeled, never overstated.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="how-it-works">
+    <div class="section-inner">
+      <p class="section-eyebrow">How it works</p>
+      <h2 class="section-title">Three steps, zero uploads</h2>
+      <div class="steps-grid">
+        <div class="step">
+          <span class="step-index">01</span>
+          <h3>Choose a file</h3>
+          <p>Click the scan frame or drag a file onto it. Nothing is sent anywhere — the browser reads the file directly from your device's memory.</p>
+        </div>
+        <div class="step">
+          <span class="step-index">02</span>
+          <h3>Local analysis runs</h3>
+          <p>JavaScript running on this page parses the file, computes a SHA-256 hash, and extracts whatever metadata the browser exposes.</p>
+        </div>
+        <div class="step">
+          <span class="step-index">03</span>
+          <h3>Review and export</h3>
+          <p>Results appear as a structured report you can copy, print, or export — and the file itself is discarded the moment you leave the page.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="privacy">
+    <div class="section-inner section-inner-narrow">
+      <p class="section-eyebrow">Privacy</p>
+      <h2 class="section-title">Your file never leaves your device</h2>
+      <p class="section-lead">FileDetective has no backend. There is no server to upload to, so there's nothing to intercept, store, or leak.</p>
+      <div class="privacy-grid">
+        <div class="privacy-item">
+          <h3>No uploads</h3>
+          <p>Every byte of your file is read and processed by JavaScript running locally in this browser tab.</p>
+        </div>
+        <div class="privacy-item">
+          <h3>No tracking of files</h3>
+          <p>Filenames, contents, and analysis results are never sent to any analytics or logging service.</p>
+        </div>
+        <div class="privacy-item">
+          <h3>No cloud storage</h3>
+          <p>Nothing is saved outside your own device unless you explicitly export a report.</p>
+        </div>
+        <div class="privacy-item">
+          <h3>No hidden scanning</h3>
+          <p>FileDetective only performs the checks described on this page — nothing runs silently in the background.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="faq">
+    <div class="section-inner section-inner-narrow">
+      <p class="section-eyebrow">FAQ</p>
+      <h2 class="section-title">Common questions</h2>
+      <div class="accordion" id="accordion">
+        <div class="accordion-item">
+          <h3>
+            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-1">
+              Does any part of my file get uploaded?
+              <svg class="accordion-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 5L7 10L12 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </h3>
+          <div class="accordion-panel" id="faq-1" role="region">
+            <p>No. FileDetective has no server component. Everything happens inside JavaScript running in your browser tab, and the file is never transmitted anywhere.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3>
+            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-2">
+              What file types are supported?
+              <svg class="accordion-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 5L7 10L12 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </h3>
+          <div class="accordion-panel" id="faq-2" role="region">
+            <p>Common images, PDFs, audio, video, and text-based formats including JSON, XML, HTML, CSS, and JavaScript. Unsupported files still get general information and a hash.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3>
+            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-3">
+              Does FileDetective detect malware?
+              <svg class="accordion-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 5L7 10L12 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </h3>
+          <div class="accordion-panel" id="faq-3" role="region">
+            <p>No. Browsers can't scan for malware signatures. FileDetective surfaces filename and extension heuristics — like double extensions — as signals, not a verdict.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3>
+            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-4">
+              Does FileDetective work offline?
+              <svg class="accordion-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 5L7 10L12 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </h3>
+          <div class="accordion-panel" id="faq-4" role="region">
+            <p>Once the page has loaded, analysis itself needs no network connection at all, since every computation happens locally.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3>
+            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-5">
+              How is the hash calculated?
+              <svg class="accordion-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 5L7 10L12 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </h3>
+          <div class="accordion-panel" id="faq-5" role="region">
+            <p>FileDetective uses the Web Crypto API to compute a SHA-256 digest of the file's contents, directly in your browser.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="section-inner section-inner-narrow">
+      <p class="section-eyebrow">About</p>
+      <h2 class="section-title">Built to be inspected, not just used</h2>
+      <p class="section-lead">FileDetective exists because inspecting a file shouldn't require handing it over to a stranger's server. It's a small, focused tool: point it at a file, and it tells you exactly what the browser can honestly determine about it — no more, no less.</p>
+      <p class="section-lead">The project runs entirely as static files on GitHub Pages. There's no account system, no database, and no hidden infrastructure — what you see in the browser is the whole application.</p>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="contact">
+    <div class="section-inner section-inner-narrow">
+      <p class="section-eyebrow">Contact</p>
+      <h2 class="section-title">Questions or feedback</h2>
+      <p class="section-lead">The fastest way to reach the project is through GitHub. Issues, ideas, and pull requests are all welcome there.</p>
+      <div class="contact-actions">
+        <a class="btn btn-primary" href="https://github.com/filedetective" target="_blank" rel="noopener noreferrer">Open GitHub repository</a>
+        <a class="btn btn-outline" href="mailto:hello@filedetective.app">hello@filedetective.app</a>
+      </div>
+    </div>
+  </section>
 
 </main>
 
-
-
-
-
-<section class="features-section" id="features">
-
-
-<div class="container">
-
-
-<div class="section-title">
-
-
-<h2>
-Powerful File Analysis
-</h2>
-
-
-<p>
-Everything happens locally inside your browser.
-</p>
-
-
-</div>
-
-
-
-
-<div class="analysis-grid">
-
-
-<div class="info-card">
-
-
-<h3>
-🔒 Privacy First
-</h3>
-
-
-<p>
-Your files are never uploaded. Everything stays on your device.
-</p>
-
-
-</div>
-
-
-
-<div class="info-card">
-
-
-<h3>
-⚡ Instant Results
-</h3>
-
-
-<p>
-Get file information, hashes and metadata quickly.
-</p>
-
-
-</div>
-
-
-
-<div class="info-card">
-
-
-<h3>
-🛡 Security Checks
-</h3>
-
-
-<p>
-Detect suspicious file extensions and basic risks.
-</p>
-
-
-</div>
-
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-<section class="privacy-section" id="privacy">
-
-
-<div class="container">
-
-
-<div class="section-title">
-
-
-<h2>
-Your Privacy Matters
-</h2>
-
-
-<p>
-Private analysis without uploading your files.
-</p>
-
-
-</div>
-
-
-
-<div class="info-card">
-
-
-<p>
-
-Traditional online tools often require uploading files.
-FileDetective works differently.
-
-</p>
-
-
-<p>
-
-All analysis happens directly in your browser.
-Your documents, images and media stay with you.
-
-</p>
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-<section class="about-section" id="about">
-
-
-<div class="container">
-
-
-<div class="section-title">
-
-
-<h2>
-About FileDetective
-</h2>
-
-
-<p>
-A simple and powerful browser-based file intelligence tool.
-</p>
-
-
-</div>
-
-
-
-
-<div class="info-card">
-
-
-<p>
-
-FileDetective helps users understand their files by showing
-file information, metadata, hashes and security details
-without requiring any server upload.
-
-</p>
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-<section class="analysis-section">
-
-
-<div class="container">
-
-
-<div class="section-title">
-
-
-<h2>
-Analysis Report
-</h2>
-
-
-<p>
-Your file information will appear here after analysis.
-</p>
-
-
-</div>
-
-
-
-<div class="analysis-grid">
-
-
-
-<div class="info-card">
-
-
-<h3>
-General Information
-</h3>
-
-
-<div id="generalInfo">
-
-Waiting for file...
-
-</div>
-
-
-</div>
-
-<div class="info-card">
-
-
-<h3>
-Security
-</h3>
-
-
-<div id="securityInfo">
-
-Waiting for file...
-
-</div>
-
-
-</div>
-
-
-
-
-<div class="info-card">
-
-
-<h3>
-Metadata
-</h3>
-
-
-<div id="metadataInfo">
-
-Waiting for file...
-
-</div>
-
-
-</div>
-
-
-
-
-<div class="info-card">
-
-
-<h3>
-Hashes
-</h3>
-
-
-<div id="hashInfo">
-
-Waiting for file...
-
-</div>
-
-
-</div>
-
-
-
-
-</div>
-
-
-
-
-<button id="downloadReportBtn" class="primary-btn">
-
-Download Report
-
-</button>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-<section class="faq-section" id="faq">
-
-
-<div class="container">
-
-
-<div class="section-title">
-
-
-<h2>
-Frequently Asked Questions
-</h2>
-
-
-<p>
-Common questions about FileDetective.
-</p>
-
-
-</div>
-
-
-
-<div class="info-card">
-
-
-<h3>
-Are my files uploaded?
-</h3>
-
-
-<p>
-
-No. FileDetective analyzes files directly inside your browser.
-
-</p>
-
-
-</div>
-
-
-
-
-<div class="info-card">
-
-
-<h3>
-Is FileDetective free?
-</h3>
-
-
-<p>
-
-Yes. The core browser-based analysis works without payment.
-
-</p>
-
-
-</div>
-
-
-
-
-<div class="info-card">
-
-
-<h3>
-What files can I analyze?
-</h3>
-
-
-<p>
-
-Images, PDFs, audio, video and other common file types.
-
-</p>
-
-
-</div>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
 <footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 28 28" fill="none">
+          <rect x="1" y="1" width="26" height="26" rx="7" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M9 14L12.5 17.5L19 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span>FileDetective</span>
+    </div>
 
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://github.com/filedetective" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </nav>
 
-<div class="container">
-
-
-<p>
-
-© 2026 FileDetective.
-Analyze files locally. No uploads. 100% Private.
-
-</p>
-
-
-</div>
-
-
+    <div class="footer-meta">
+      <p>All analysis runs locally in your browser. No files are ever uploaded.</p>
+      <p>Version 1.0 · &copy; <span id="year"></span> FileDetective</p>
+    </div>
+  </div>
 </footer>
 
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-
-</div>
-
-<script src="js/hash.js"></script>
-
-<script src="js/image.js"></script>
-
-<script src="js/audio.js"></script>
-
-<script src="js/video.js"></script>
-
-<script src="js/pdf.js"></script>
-
-<script src="js/export.js"></script>
-
-<script src="app.js"></script>
-
-
-
+<script src="app.js" defer></script>
+<script src="js/hash.js" defer></script>
+<script src="js/image.js" defer></script>
+<script src="js/audio.js" defer></script>
+<script src="js/video.js" defer></script>
+<script src="js/pdf.js" defer></script>
+<script src="js/export.js" defer></script>
 </body>
-
 </html>
