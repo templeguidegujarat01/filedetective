@@ -1,55 +1,101 @@
+/* =========================================================
+   FileDetective — Animations
+   Keyframes and entrance/interaction transitions
+   ========================================================= */
+
+@keyframes scanmove {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
 @keyframes fadeUp {
-
-    from{
-
-        opacity:0;
-
-        transform:translateY(20px);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
-
-    }
-
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-
-.hero-content,
-.hero-preview{
-
-    animation:fadeUp .6s ease forwards;
-
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-
-.upload-card{
-
-    transition:.3s ease;
-
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
 }
 
-
-.upload-card:hover{
-
-    transform:translateY(-5px);
-
+@keyframes pulseRing {
+  0% { box-shadow: 0 0 0 0 rgba(91, 141, 239, 0.35); }
+  100% { box-shadow: 0 0 0 14px rgba(91, 141, 239, 0); }
 }
 
-
-.info-card{
-
-    transition:.3s ease;
-
+@keyframes skeletonShine {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
 }
 
+/* Hero entrance */
+.hero-eyebrow { animation: fadeUp 0.6s var(--ease) both; }
+.hero-title { animation: fadeUp 0.6s var(--ease) 0.06s both; }
+.hero-sub { animation: fadeUp 0.6s var(--ease) 0.12s both; }
+.scan-frame { animation: fadeUp 0.65s var(--ease) 0.18s both; }
+.hero-badges { animation: fadeUp 0.6s var(--ease) 0.24s both; }
 
-.info-card:hover{
+/* Drag state pulse */
+.scan-frame.dragover { animation: pulseRing 1.4s var(--ease) infinite; }
 
-    transform:translateY(-4px);
+/* Report entrance */
+.report-section:not([hidden]) .report-header { animation: fadeUp 0.45s var(--ease) both; }
 
+.report-card {
+  animation: popIn 0.4s var(--ease) both;
 }
+.report-card:nth-child(1) { animation-delay: 0.03s; }
+.report-card:nth-child(2) { animation-delay: 0.08s; }
+.report-card:nth-child(3) { animation-delay: 0.13s; }
+.report-card:nth-child(4) { animation-delay: 0.18s; }
+
+/* Scroll-reveal utility (toggled via JS IntersectionObserver) */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Accordion panel open state driven by inline max-height in JS,
+   this just smooths the icon + content fade */
+.accordion-panel p { opacity: 0; transition: opacity 0.25s var(--ease) 0.05s; }
+.accordion-item.open .accordion-panel p { opacity: 1; }
+
+/* Skeleton loader (used while a report card's async data resolves) */
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: var(--border-soft);
+  border-radius: 6px;
+  color: transparent !important;
+}
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
+  background-size: 200% 100%;
+  animation: skeletonShine 1.3s linear infinite;
+}
+
+/* Toast */
+.toast { animation: none; }
+
+/* Button micro-interaction */
+.btn { will-change: transform; }
+
+/* Copy confirmation flash */
+@keyframes copyFlash {
+  0% { background: rgba(61, 214, 140, 0.18); }
+  100% { background: transparent; }
+}
+.copy-flash { animation: copyFlash 0.6s var(--ease); }
