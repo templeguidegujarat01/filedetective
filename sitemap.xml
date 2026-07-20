@@ -1,38 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
-    <loc>https://filedetective.github.io/</loc>
+    <loc>https://templeguidegujarat01.github.io/filedetective/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
   <url>
-    <loc>https://filedetective.github.io/about.html</loc>
+    <loc>https://templeguidegujarat01.github.io/filedetective/about.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://templeguidegujarat01.github.io/filedetective/contact.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://templeguidegujarat01.github.io/filedetective/privacy.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://templeguidegujarat01.github.io/filedetective/faq.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
   <url>
-    <loc>https://filedetective.github.io/privacy.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://filedetective.github.io/faq.html</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://templeguidegujarat01.github.io/filedetective/terms.html</loc>
+    <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
+
   <url>
-    <loc>https://filedetective.github.io/contact.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://filedetective.github.io/terms.html</loc>
+    <loc>https://templeguidegujarat01.github.io/filedetective/disclaimer.html</loc>
     <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <priority>0.5</priority>
   </url>
+
   <url>
-    <loc>https://filedetective.github.io/disclaimer.html</loc>
+    <loc>https://templeguidegujarat01.github.io/filedetective/offline.html</loc>
     <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <priority>0.2</priority>
   </url>
+
+  <url>
+    <loc>https://templeguidegujarat01.github.io/filedetective/404.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.1</priority>
+  </url>
+
 </urlset>
