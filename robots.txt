@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://filedetective.github.io/sitemap.xml
+Sitemap: https://templeguidegujarat01.github.io/filedetective/sitemap.xml
